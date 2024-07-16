@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <title>Software User Manual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: #0779e4 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+            text-align: center;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px;
+        }
+        header #branding {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        section {
+            padding: 20px 0;
+        }
+        #main {
+            margin-top: 20px;
+        }
+        .dark {
+            padding: 15px;
+            background: #333;
+            color: #fff;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #333;
+            text-align: center;
+        }
+        img {
+            max-width: 60%;
+            height: auto;
+            image-rendering: auto
+        }
+        .image-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .image-row figure {
+            width:30%
+        }
+        .image-row img {
+            max-width: 90%;
+        }
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+        figcaption {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+        .tutu img {
+            max-width: 100%;
+            width:200%; 
+            justify-content: center; 
+            flex-wrap: wrap;
+        }
+        p {
+            text-align: justify;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>User Manual for Intelligent Metamaterials Designer</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#func">Functions</a></li>
+                    <li><a href="#installation">Installation Guide</a></li>
+                    <li><a href="#usage">Usage Instructions</a></li>
+                    <li><a href="#Para">Parameters Introduction</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main" class="container">
+        <article id="intro">
+            <h2>Introduction</h2>
+            <p>This software is used for the intelligent design of mechanical metamaterials. Metamaterial 
+                microstructures are generated iteratively in reverse by pre-inputting specified values of 
+                Young's modulus and Poisson's ratio.</p>
+        </article>
+        <article id="func">
+            <h2>Functions</h2>
+            <p> As shown in Fig.1, here are several functions of the metamaterials designer:</p>
+            <ol>
+                <li>Export STL File: click it to export the STL file.</li>
+                <li>Export Effective Elastic Matrix: click it to export a text file containing the effective elastic matrix.</li>
+                <li>Export Image: click it to export the image of the optimized microstructure.</li>
+                <li>Target Function Mode: click it to choose the loss function.</li>
+            </ol>
+            <figure>
+            <img src="Fig-1.png">
+            <figcaption>Fig. 1: The functions of metamaterials designer.</figcaption>
+            </figure>
+
+        <article id="installation">
+            <h2>Installation Guide</h2>
+            <p>This software was developed using matlab 2019. Follow these steps to install the software:</p>
+            <ol>
+                <li>Click on the installation file download from  <a href="https://github.com/CJJP-git/Memtamaterials-intelligent-design/blob/main/MetamaterialDesigner.exe">here</a>.</li>
+                <li>The installation interface is shown in Fig. 2. Click on "Next."</li>
+                <figure>
+                    <img src="Fig-2.png">
+                    <figcaption>Fig.2 Installation: interface</figcaption>
+                </figure>
+                <li>Select the installation directory, check the shortcut, and click "Next."</li>
+                <figure>
+                    <img src="Fig-3.png">
+                    <figcaption>Fig.3 Installation: installation directory</figcaption>
+                </figure>
+                <li>Install MATLAB Runtime. Select the installation directory and click "Next."</li>
+                <figure>
+                    <img src="Fig-4.png">
+                    <figcaption>Fig.4 Installation: Install MATLAB Runtime</figcaption>
+                </figure>
+                <li>Select "Yes" and click "Next."</li>
+                <figure>
+                    <img src="Fig-5.png">
+                    <figcaption>Fig.5 Installation: accept the licence</figcaption>
+                </figure>
+                <li>Click "Install" to start the installation.</li>
+                <figure>
+                    <img src="Fig-6.png">
+                    <figcaption>Fig.6 Installation: start installation</figcaption>
+                </figure>
+                <li>Successful!</li>
+                <figure>
+                    <img src="Fig-7.png">
+                    <figcaption>Fig.7 Installation: successful</figcaption>
+                </figure>
+            </ol>
+        </article>
+
+        <article id="usage">
+            <h2>Usage Instructions</h2>
+            <h3>This section explains how to use the main functions of the software:</h3>
+            <ol>
+                <li><i>Select an optimization target. Loss functions for three objectives are built in:  Effective Poisson's ratio, Effective Young's modulus, and Dual Objective. </i></li>
+                <p><b>Effective Poisson's ratio:</b> Effective Poisson's ratios for both directions are accepted in this mode. <b>(a)</b> When one of them is set to be greater than 1000, 
+                    it is considered that the parameter in that direction is blocked and will be optimized with the other direction given only. <b>(b)</b> When both parameters are 
+                    less than 1000, the Poisson's ratio will be optimized for both directions. <b>(c)</b> When the Poisson's ratio value is the same for both directions, 
+                    isotropic metamaterials with preset Poisson's ratio values will be obtained.
+                </p>
+                <p><b>Effective Young's modulus:</b> Effective Young's modulus for both directions are accepted in this mode. <b>(a)</b> When one of them is set to be greater than 1000, 
+                    it is considered that the parameter in that direction is blocked and will be optimized with the other direction only. <b>(b)</b> When both parameters are 
+                    less than 1000, the Young's modulus will be optimized for both directions. <b>(c)</b> When the values of Young's modulus are the same for both directions, 
+                    isotropic metamaterials with preset Young's modulus values will be obtained.
+                </p>
+                <p>
+                    <b>Dual objectives:</b> The effective Poisson's ratio and effective Young's modulu are optimized in the same time. The $E_{11}$, $\rho_{12}$, and $\rho_{21}$ are required 
+                    for optimization. When the input value of  $\rho_{12}$, and $\rho_{21}$ are same, the metamaterials structure will be isotropic automatically.
+                </p>
+                    <figure>
+                    <img src="Fig-8.png">
+                    <figcaption>Fig.8 Function modes</figcaption>
+                </figure>
+                <li><i>Set the parameters for Particle Swarm Optimization. </i></li>
+                    <p>Some PSO parameters need to be adjusted, the specific meaning of the parameters and how to adjust them are shown 
+                        in <a href="#Para">here</a>.
+                    </p>
+                <li><i>Click "Start" to lauch the optimization.</i></li>
+                    <p>Once the "Start" has been clicked, one message will occur in the message column to remind the user of the initialization beginning. After the initialization, the iterative 
+                        optimization will start. The image of the microstructure will appear in the "Optimization Results" column. The iteration procession will appear in the "Optimization Process" column, as shown in Fig.9.
+                    </p>
+                    <figure>
+                        <img src="Fig-9.png">
+                        <figcaption>Fig.9 Optimization Start</figcaption>
+                    </figure>
+                <li><i>End of Optimization</i>
+                    <p>
+                        There are three ways to end the optimization: 
+                        <b>(a)</b> When the user clicks Stop, the optimization will stop after iterating the current computation step, and a message will be sent to 
+                        remind the user, as shown in Fig.10. 
+                        <b>(b)</b> When the number of iterations reaches the maximum number of optimizations, the iteration will stop, and a message will be sent to remind the user, as shown in Fig.11. 
+                        <b>(c)</b> When the optimal solution is not updated within 30 cycles, the iteration will stop, and a message will be sent to remind the user.
+                    </p>
+                    <div class="image-row">
+                        <figure>
+                            <img src="Fig-10.png">
+                            <figcaption>Fig-10: End by user</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Fig-11.png">
+                            <figcaption>Fig-11: End by reaching maximum iterations</figcaption>
+                        </figure>
+                    </div>
+                </li>
+                <li><i>Export of the optimized structure</i></li>
+                <p>The optimization results can be exported in three types of files: 
+                    <b>(a)</b> Geometric model. Given the STL resolution and the desired number of long model arrays, the desired STL file is generated for 3D printing or further modeling， as shown in Fig.12 and Fig.13. 
+                    <b>(b)</b> Equivalent elasticity matrix. Export a text file of the equivalent elasticity matrix, as shown in Fig.14 and Fig.15. 
+                    <b>(c)</b> Export the image file of the topology, as shown in Fig.16 and Fig.17.
+                </p>
+                <div class="image-row">
+                    <figure>
+                        <img src="Fig-12.png">
+                        <figcaption>Fig-12: STL file export</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Fig-14.png">
+                        <figcaption>Fig-14: Effective elasticity matrix export</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Fig-16.png">
+                        <figcaption>Fig-16: Toplogy structure image export</figcaption>
+                    </figure>
+                </div>
+                <div class="image-row">
+                    <figure>
+                        <img src="Fig-13.png">
+                        <figcaption>Fig-13: STL model</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Fig-15.png">
+                        <figcaption>Fig-15: text file</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Fig-17.jpg">
+                        <figcaption>Fig-17: Image file</figcaption>
+                    </figure>
+                </div>
+            </ol>
+        </article>
+        <article id="Para">
+            <h2>Parameters Introduction</h2>
+            <p>
+                The following table shows the meaning and recommendation values for each parameter. Here are some tips:
+            </p>
+            <ol>
+                <li><b>Target: </b>According to our <a href=""> research</a> (to be updated), extreme parameters of Poisson's ratio and Young's modulus are not
+                     suitable to be optimized and designed at the same time. Specifically, you can refer to the design boundary map shown in Fig.18.  The 
+                     yellow region represents that the algorithm is more difficult to converge at the corresponding objective value, while the green region represents 
+                     that it is easy to converge.</li>
+                     <figure>
+                        <img src="Fig-18.png">
+                        <figcaption>Fig-18: Design boundary map</figcaption>
+                    </figure>
+                <li><b>Design Region: </b> The mesh size control parameters $N_{elx}$ and $N_{ely}$ should not be too large; otherwise, the optimization will be so slow. 
+                    By increasing the component number $N_{rod}$, optimized microstructures will exhibit smoother boundaries and will also increase the optimization 
+                    parameters, making the algorithm converge more slowly.</li>
+                <li><b>Range of variables:</b> By increasing the margin of these parameters, the design space would be expanded while the optimization process would be harder.
+                Once could adjust it to trade-off performance and richness.</li>
+                <li><b>PSO: </b>The swarm size is related to the number of optimization variables. When four components are used in the Design Region, which means 20 design variables \
+                    worked, the swarm size should be larger than 50 (Twice of the number of design variables). The maximum iteration could control the stop of optimization. Finally,
+                    adjusting the self-learning factor$\phi_1$ and the social learning factor$\phi_2$ can affect algorithm convergence. As shown in Fig-19, using a diagonal band from top left 
+                    to bottom right with corresponding parameter points, the algorithm will have a greater likelihood and converge in a shorter iteration step.</li>
+                <figure class="tutu">
+                        <img src="Fig-19.jpg">
+                        <figcaption>Fig-19: Effect of PSO parameters</figcaption>
+                </figure>
+            </ol>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parttions</th>
+                        <th>Parameters</th>
+                        <th>Meaning</th>
+                        <th>Recommendation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 20 rows -->
+                    <tr>
+                        <td rowspan="4">Target</td>
+                        <td>$\rho_{12}$</td>
+                        <td>Eeffective Poisson's ratio (y to x direction)</td>
+                        <td>User define</td>
+                    </tr>
+                    <tr>
+                        <td>$\rho_{21}$</td>
+                        <td>Eeffective Poisson's ratio (x to y direction)</td>
+                        <td>User define</td>
+                    </tr>
+                    <tr>
+                        <td>$E_{11}$</td>
+                        <td>Eeffective Young's modulus (x direction)</td>
+                        <td>User define</td>
+                    </tr>
+                    <tr>
+                        <td>$E_{22}$</td>
+                        <td>Eeffective Young's modulus (y direction)</td>
+                        <td>User define</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">Design Region</td>
+                        <td>$D_W$</td>
+                        <td>With of design domain</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>$D_H$</td>
+                        <td>Height of design domain</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>$N_{elx}$</td>
+                        <td>The element number in the x-direction</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>$N_{ely}$</td>
+                        <td>The element number in the Young/td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>$N_{rod}$</td>
+                        <td>1/4 number of components</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">Renge of variables</td>
+                        <td>$x_0$</td>
+                        <td>movable x-coordinate range of component center</td>
+                        <td>0-1</td>
+                    </tr>
+                    <tr>
+                        <td>$y_0$</td>
+                        <td>movable y-coordinate range of component center</td>
+                        <td>0-1</td>
+                    </tr>
+                    <tr>
+                        <td>$L$</td>
+                        <td>The changable range of the component's length</td>
+                        <td>0-1.41</td>
+                    </tr>
+                    <tr>
+                        <td>$T$</td>
+                        <td>The changable range of the component's width</td>
+                        <td>0-0.1</td>
+                    </tr>
+                    <tr>
+                        <td>$\theta$</td>
+                        <td>The sin value of changable range of component's rotation angle</td>
+                        <td>0-1</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">PSO</td>
+                        <td>SwarmSize</td>
+                        <td>The size of the swarm population</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>InertiaRange</td>
+                        <td>The Range of Inertia</td>
+                        <td>0.1-1.1</td>
+                    </tr>
+                    <tr>
+                        <td>Max_iteration</td>
+                        <td>The maximum iteration step</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>SelfWeight</td>
+                        <td>The weight of self-learning</td>
+                        <td>1.49</td>
+                    </tr>
+                    <tr>
+                        <td>SocialWeight</td>
+                        <td>The weight of social-learning</td>
+                        <td>1.49</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+
+    <footer>
+        <p style="text-align: center;">User Manual for Intelligent Metamaterials Designer &copy;Jipeng Cui, 2024</p>
+    </footer>
+</body>
+</html>
